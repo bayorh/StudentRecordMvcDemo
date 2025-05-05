@@ -1,0 +1,25 @@
+﻿@model StudentRecord.Models.Entities.Student
+
+@{
+    ViewData["Title"] = "Student Details ";
+}
+
+<h2>Student Details</h2>
+
+<div>
+    <h4>Student</h4>
+    <hr />
+
+    <ul class="row">
+    <dt class="col-sm-2">Id:</dt>
+    <dt class="col-sm-10">@Model.Id</dt>
+    <dt class="col-sm-2">Name:</dt>
+    <dd class="col-sm-10">@Model.Name</dd>
+    <dt class="col-sm-2">Age:</dt>
+    <dt class="col-sm-10">@Model.Age</dt>
+    </ul>
+    <p>
+        <a asp-action="Edit" asp-route-id="@Model.Id" class="btn btn-primary">Edit</a>
+        <a asp-action="Index" class="btn btn-secondary">Back</a>
+    </p>
+</div>
